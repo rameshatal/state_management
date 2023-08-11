@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 
 import 'counter_provider.dart';
 
-class SecondPage extends StatelessWidget{
+class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print("Second Page built");
@@ -32,24 +32,24 @@ class SecondPage extends StatelessWidget{
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             FloatingActionButton(
-              onPressed: (){
+              onPressed: () {
                 //set
-                Provider.of<CounterProvider>(context, listen: false).decrementCount();
+                Provider.of<CounterProvider>(context, listen: false)
+                    .decrementCount();
               },
               tooltip: 'Decrement',
               child: const Icon(Icons.remove),
             ),
-
             FloatingActionButton(
-              onPressed: (){
+              onPressed: () {
                 //set
-                Provider.of<CounterProvider>(context, listen: false).incrementCount();
+                Provider.of<CounterProvider>(context, listen: false)
+                    .incrementCount();
               },
               tooltip: 'Increment',
               child: const Icon(Icons.add),
             ),
           ],
-        )
-    );
+        ));
   }
 }
